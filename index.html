@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshul Sharma</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body class="overflow-hidden">
+    <div class="loader-container">
+        <div class="loader">
+            <div class="hex"></div>
+            <div class="para1"></div>
+            <div class="para2"></div>
+            <div class="para3"></div>
+        </div>
+    </div>
+    <navbar>
+        <div class="logo">Anshul</div>
+
+        <ul class="small-ul">
+            <li><a href="">About</a></li>
+            <li><a href="">Projects</a></li>
+            <div class="burger-box">
+                <div class="hamburger"></div>
+            </div>
+        </ul>
+        <ul class="large-ul">
+            <li><a href="">About</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Skills</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </navbar>
+    <header>
+        <div data-aos="fade-down" class="header-left">
+            <h1><span>Hi!</span><br>
+                I'm a
+                <pre style="display: inline-block;" class=" changing-text"></pre>
+            </h1>
+        </div>
+        <div data-aos="flip-up" class="header-right">
+            <div class="image-container">
+                <div class="image"></div>
+            </div>
+        </div>
+    </header>
+
+    <div data-aos="zoom-in" class="about">
+        <h1 class="heading">About me :)</h1>
+        <div class="content">
+            <div>
+                <div data-aos="flip-left" class="image-container">
+                    <div class="image">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p data-aos="fade-up-right" class="text">
+                    Hi! I'm <b>Anshul</b> I am a student at Panipat Institute of Engineering and Technology pursuing
+                    Bachelor of
+                    Technology in Computer Science. I enjoy developing new things and writing logic to make them
+                    interactive :)
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="projects">
+        <h1 class="heading">Projects</h1>
+        <div class="content">
+            <div data-aos="flip-right" class="card">
+                <div class="image-container">
+                    <div class="image">
+                        <i class="fas fa-building fa-4x"></i>
+                    </div>
+                </div>
+                <div class="title">Internship as Web Developer</div>
+                <div class="text">
+                    <div class="small-title">Internship as Web Developer</div>
+                    <div class="desc">Mainly I had worked on
+                        frontEnd. Technologies used for frontEnd - <b>HTML,CSS,JS,Bootstrap</b> and for BackEnd -
+                        <b>PHP,MYSQL.</b>
+                        There i got to know about Github and from then I started using Git more and more for almost
+                        every Project.</div>
+                    <a href="">Click here :)</a>
+                </div>
+            </div>
+            <div data-aos="fade-up-right" class="card">
+                <div class="image-container">
+                    <div class="image">
+                        <i class="fas fa-gamepad fa-4x"></i>
+                    </div>
+                </div>
+                <div class="title">Wack-A-Mole game</div>
+                <div class="text">
+                    <div class="small-title">Wack-A-Mole game</div>
+                    <div class="desc">Designed a basic game using vanilla JavaScript and CSS. I has used JS timing
+                        functions
+                        <b>(setTimeout and setInterval)</b> to make this game work properly.
+                        Added some more functionality to restart and stop the game.
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="zoom-out-up" class="card">
+                <div class="image-container">
+                    <div class="image">
+                        <i class="fas fa-robot fa-4x"></i>
+                    </div>
+                </div>
+                <div class="title">Speaking Bot</div>
+                <div class="text">
+                    <div class="small-title">Speaking Bot</div>
+                    <div class="desc">Developing such a different project is at first challenging and a lot
+                        interesting for me. In this
+                        project I deal with JavaScript built-in <b>speechSynthesis and speechRecongnition</b> APIs.
+                    </div>
+                    <a href="">Click here :)</a>
+                </div>
+            </div>
+            <div data-aos="zoom-in-down" class="card">
+                <div class="image-container">
+                    <div class="image">
+                        <i class="fas fa-robot fa-4x"></i>
+                    </div>
+                </div>
+                <div class="title">Custom Video Player</div>
+                <div class="text">
+                    <div class="small-title">Custom Video Player</div>
+                    <div class="desc">Made a Custom Video player with CSS and using <b>video element properties</b>
+                        in JavaScript.Added
+                        some functionality like speed up the video with <b>playbackRate</b> property of video
+                        element.</div>
+                    <a href="">Click here :)</a>
+                </div>
+            </div>
+            <div data-aos="flip-down" class="card">
+                <div class="image-container">
+                    <div class="image">
+                        <i class="fas fa-volleyball-ball fa-4x"></i>
+                    </div>
+                </div>
+                <div class="title">Moving Balls</div>
+                <div class="text">
+                    <div class="small-title">Moving Balls</div>
+                    <div class="desc">Developing such a different project is at first challenging and a lot
+                        interesting for me. In this
+                        project I deal with JavaScript built-in <b>speechSynthesis and speechRecongnition</b> APIs.
+                    </div>
+                    <a href="">Click here :)</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- myScript -->
+    <script src="./script.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            dealy: 0,
+            duration: 500
+        });
+    </script>
+    <!-- vanilla-tilt -->
+    <script src="./vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".projects .card"), {
+            speed: 400,
+            max: 25
+        });
+    </script>
+</body>
+
+</html>
