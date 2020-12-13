@@ -203,11 +203,22 @@ body {
 
 navbar {
   width: 100%;
-  padding: 20px;
+  height: fit-content;
+  margin-top: 20px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  transition: 0.2s;
+}
+.fixed-nav {
+  margin: 0;
+  position: fixed;
+  top: -100%;
+  background: #fff;
+  z-index: 20;
+  box-shadow: 2px 2px 20px var(--primary-color);
 }
 navbar ul li {
   list-style: none;
@@ -430,7 +441,7 @@ header {
   width: fit-content;
   font-weight: bold;
   margin: 10px;
-  font-size: 4.3rem;
+  font-size: 4rem;
 }
 .header-left h1 :first-child {
   color: var(--primary-color);
@@ -544,12 +555,12 @@ header {
   -moz-box-shadow: -3px 5px 20px -5px var(--third-color);
   box-shadow: -3px 5px 20px -5px var(--third-color);
   overflow: hidden;
-  transform: scaleY(0);
+  transform: translateZ(25px) scaleY(0);
   transition: 0.3s;
 }
 
 .projects .card:hover .text {
-  transform: scale(1);
+  transform: translateZ(25px) scale(1);
 }
 
 .projects .card .text .small-title {

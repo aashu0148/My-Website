@@ -1,4 +1,5 @@
 const body = document.body;
+const navbar = document.querySelector("navbar");
 const loaderContainer = document.querySelector(".loader-container");
 const burger = document.querySelector(".burger-box");
 const largeUl = document.querySelector("navbar .large-ul");
@@ -17,6 +18,31 @@ burger.addEventListener("click", () => {
         document.documentElement.classList.toggle("overflow-hidden");
     }, 300)
 })
+
+//fixed navbar
+
+var prevScroll = window.scrollY;
+let topOfNav = navbar.offsetHeight;
+function fixedNav() {
+    if (window.scrollY >= topOfNav) {
+        body.style.paddingTop = `${navbar.offsetHeight}px`;
+        navbar.classList.add("fixed-nav");
+    } else {
+        body.style.paddingTop = 0;
+        navbar.classList.remove("fixed-nav");
+    }
+    if (window.scrollY < prevScroll) {
+        console.log(prevScroll, window.scrollY, true);
+        navbar.style.top = "0%";
+    } else {
+        console.log(prevScroll, window.scrollY, false);
+        navbar.style.top = "-100%";
+    }
+    prevScroll = window.scrollY;
+}
+
+window.addEventListener("scroll", fixedNav);
+
 
 // header-left
 let words = "Developer Student ";
