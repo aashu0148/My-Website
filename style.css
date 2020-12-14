@@ -204,7 +204,6 @@ body {
 navbar {
   width: 100%;
   height: fit-content;
-  margin-top: 20px;
   padding: 5px 20px;
   display: flex;
   justify-content: space-between;
@@ -218,7 +217,7 @@ navbar {
   top: -100%;
   background: #fff;
   z-index: 20;
-  box-shadow: 2px 2px 20px var(--primary-color);
+  box-shadow: 1px 1px 5px var(--primary-color);
 }
 navbar ul li {
   list-style: none;
@@ -338,12 +337,12 @@ navbar .large-ul {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  transform: translateX(105%);
+  transform: translate(105%, 0px);
   transition: 0.4s ease-in;
   z-index: 5;
 }
 navbar .active-list {
-  transform: translateX(0%);
+  transform: translate(0%, 0px);
 }
 .large-ul li {
   padding: 5px;
@@ -526,7 +525,7 @@ header {
   border-radius: 36% 64% 25% 75% / 56% 71% 29% 44%;
   overflow: hidden;
 }
-.projects :nth-child(odd) .image-container {
+.projects .content :nth-child(odd) .image-container {
   border-radius: 28% 72% 20% 80% / 48% 32% 68% 52%;
   background: linear-gradient(80deg, var(--primary-color), var(--third-color));
 }
@@ -568,6 +567,41 @@ header {
   font-size: 1.3rem;
 }
 
+/* ************************************* Skills ************************************ */
+.skills {
+  padding: 20px;
+}
+.skills .content {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.skill {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  text-align: center;
+  padding: 30px;
+  padding-bottom: 20px;
+  margin: 30px;
+  overflow: hidden;
+  background: linear-gradient(16deg, var(--primary-color), var(--third-color));
+  border-radius: 77% 23% 74% 26% / 22% 64% 36% 78%;
+}
+
+.skill .logo {
+  transform: translateZ(20px);
+  width: 99px;
+  height: 98px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.skill h3 {
+  transform: translateZ(50px);
+  font-weight: bolder;
+  color: #fff;
+}
 /* *********************************** media queries*************************** */
 @media (max-width: 900px) {
   .header-right .image-container {
@@ -603,6 +637,10 @@ header {
   }
   .about .content .text {
     margin: auto;
+  }
+  .skills .content .skill .logo {
+    height: 89px;
+    width: 89px;
   }
 }
 

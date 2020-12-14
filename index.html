@@ -150,9 +150,10 @@
                 <div class="title">Moving Balls</div>
                 <div class="text">
                     <div class="small-title">Moving Balls</div>
-                    <div class="desc">Developing such a different project is at first challenging and a lot
-                        interesting for me. In this
-                        project I deal with JavaScript built-in <b>speechSynthesis and speechRecongnition</b> APIs.
+                    <div class="desc">I Enjoyed so much in doing this project.This Project have small bouncing balls all
+                        around the
+                        <b>canvas</b> and bounce back from the sides of the canvas to add the interactivity to this i
+                        changed the size of the small balls on mouse move on canvas.
                     </div>
                     <a href="">Click here :)</a>
                 </div>
@@ -161,6 +162,43 @@
         </div>
     </div>
 
+    <div class="skills">
+        <h1 class="heading">Skills</h1>
+        <div class="content">
+            <div data-aos="fade-left-down" class="html skill">
+                <div class="logo" style="background:url('./icons/HTML5.svg')"></div>
+                <h3>HTML5</h3>
+            </div>
+            <div data-aos="flip-left" class="css skill">
+                <div class="logo" style="background:url('./icons/css-3.svg')"></div>
+                <h3>CSS 3</h3>
+            </div>
+            <div data-aos="zoom-in-right" class="java skill">
+                <div class="logo" style="background:url('./icons/java.svg')"></div>
+                <h3>JAVA</h3>
+            </div>
+            <div data-aos="flip-right" class="js skill">
+                <div class="logo" style="background:url('./icons/icons8-javascript.svg')"></div>
+                <h3>JAVASCRIPT</h3>
+            </div>
+            <div data-aos="fade-left-down" class="bootstrap skill">
+                <div class="logo" style="background:url('./icons/bootstrap.svg')"></div>
+                <h3>BOOTSTRAP</h3>
+            </div>
+            <div data-aos="zoom-out-right" class="react skill">
+                <div class="logo" style="background:url('./icons/react.svg')"></div>
+                <h3>REACT</h3>
+            </div>
+            <div data-aos="flip-right" class="php skill">
+                <div class="logo" style="background:url('./icons/php.svg')"></div>
+                <h3>PHP</h3>
+            </div>
+            <div data-aos="fade-right-up" class="mysql skill">
+                <div class="logo" style="background:url('./icons/mysql.svg')"></div>
+                <h3>MYSQL</h3>
+            </div>
+        </div>
+    </div>
 
 
     <!-- myScript -->
@@ -178,9 +216,17 @@
     <script src="./vanilla-tilt.js"></script>
     <script>
         VanillaTilt.init(document.querySelectorAll(".projects .card"), {
-            speed: 400,
-            max: 25
+            speed: 1000,
+            max: 30,
+            gyroscope: true
         });
+        VanillaTilt.init(document.querySelectorAll(".skills .content .skill"), {
+            speed: 3000,
+            max: 20,
+            glare: true,
+            "max-glare": 0.7,
+            reset: false
+        })
     </script>
 </body>
 

@@ -21,24 +21,24 @@ burger.addEventListener("click", () => {
 
 //fixed navbar
 
-var prevScroll = window.scrollY;
-let topOfNav = navbar.offsetHeight;
+var prevScroll = window.pageYOffset;
+let navHeight = navbar.offsetHeight;
 function fixedNav() {
-    if (window.scrollY >= topOfNav) {
-        body.style.paddingTop = `${navbar.offsetHeight}px`;
+    if (window.pageYOffset >= navHeight + 200) {
+        body.style.paddingTop = `${navHeight}px`;
         navbar.classList.add("fixed-nav");
     } else {
-        body.style.paddingTop = 0;
-        navbar.classList.remove("fixed-nav");
+        if (window.pageYOffset < navHeight / 4) {
+            body.style.paddingTop = 0;
+            navbar.classList.remove("fixed-nav");
+        }
     }
-    if (window.scrollY < prevScroll) {
-        console.log(prevScroll, window.scrollY, true);
+    if (window.pageYOffset < prevScroll) {
         navbar.style.top = "0%";
     } else {
-        console.log(prevScroll, window.scrollY, false);
-        navbar.style.top = "-100%";
+        navbar.style.top = `-${navHeight + 20}px`;
     }
-    prevScroll = window.scrollY;
+    prevScroll = window.pageYOffset;
 }
 
 window.addEventListener("scroll", fixedNav);
