@@ -200,7 +200,30 @@ body {
 }
 
 /* *************************************************************************** */
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("./image\ 36.svg");
+  background-size: cover;
+  z-index: -5;
+  transform: scale(1.8) translateX(0);
+  /* filter: blur(4px); */
+}
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
 
+/* ********************************** Navbar ******************************** */
+.nav-cont {
+  width: 100%;
+}
 navbar {
   width: 100%;
   height: fit-content;
@@ -212,7 +235,6 @@ navbar {
   transition: 0.2s;
 }
 .fixed-nav {
-  margin: 0;
   position: fixed;
   top: -100%;
   background: #fff;
@@ -227,6 +249,7 @@ navbar .logo {
   letter-spacing: 2px;
   font-size: 3rem;
   font-weight: bold;
+  margin-left: 20px;
 }
 navbar .small-ul {
   width: 25%;
@@ -364,12 +387,13 @@ header {
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
+  height: 100%;
 }
 .header-left {
   width: 60%;
 }
 .header-right {
-  margin-bottom: 40px;
+  margin-bottom: 10%;
 }
 .header-right .image-container {
   background: linear-gradient(
@@ -433,22 +457,50 @@ header {
   background-size: contain;
 }
 .header-left {
-  margin: auto 5px;
+  margin: 5px;
   margin-right: 20px;
 }
 .header-left h1 {
   width: fit-content;
   font-weight: bold;
-  margin: 10px;
+  margin: 10px auto;
   font-size: 4rem;
 }
 .header-left h1 :first-child {
   color: var(--primary-color);
+  text-shadow: 2px 1px #fff;
 }
 .header-left .changing-text {
   min-width: 250px;
 }
 
+.header-left .h-left-btn {
+  height: 60px;
+  overflow: hidden;
+  padding: 10px;
+  cursor: pointer;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  color: #fff;
+  background: var(--primary-color);
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+}
+.header-left .h-left-btn span {
+  font-family: cursive;
+  font-size: 3rem;
+}
+.header-left .h-left-btn:hover {
+  background: var(--primary-color);
+  transform: scale(0.9);
+  box-shadow: 1px 1px 15px var(--primary-color);
+}
 /* *********************************** About ********************************* */
 .about {
   padding: 30px;
@@ -603,7 +655,19 @@ header {
   color: #fff;
 }
 /* *********************************** media queries*************************** */
-@media (max-width: 900px) {
+@media (min-width: 1200px) {
+  navbar .logo {
+    margin-left: 80px;
+  }
+  .header-right .image-container {
+    height: 350px;
+    width: 450px;
+  }
+  .header-left h1 {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 1025px) {
   .header-right .image-container {
     height: 250px;
     width: 350px;
@@ -632,6 +696,7 @@ header {
     flex-direction: column;
   }
   .about .content {
+    margin: 0;
     width: 100%;
     flex-direction: column;
   }
@@ -642,9 +707,15 @@ header {
     height: 89px;
     width: 89px;
   }
+  .skill {
+    margin: 15px;
+  }
 }
 
 @media (max-width: 400px) {
+  .main::before {
+    transform: scale(1.8) translateX(-50px);
+  }
   .burger-box .hamburger::before {
     transition: 0.2s !important;
   }
@@ -659,5 +730,16 @@ header {
   }
   .heading {
     font-size: 3rem;
+  }
+  .header-left .h-left-btn {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .skills .skill {
+    padding: 15px;
+  }
+  .skills .skill .content h3 {
+    font-weight: 100;
+    font-size: 90%;
   }
 }

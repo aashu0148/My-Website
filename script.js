@@ -1,4 +1,5 @@
 const body = document.body;
+const navCont = document.querySelector(".nav-cont");
 const navbar = document.querySelector("navbar");
 const loaderContainer = document.querySelector(".loader-container");
 const burger = document.querySelector(".burger-box");
@@ -7,8 +8,9 @@ const changingText = document.querySelector(".header-left .changing-text")
 
 
 function init() {
-    body.classList.remove("overflow-hidden");
+    document.documentElement.classList.remove("overflow-hidden");
     loaderContainer.style.display = "none";
+    navCont.style.height = `${navbar.offsetHeight}px`;
     writeText();
 }
 burger.addEventListener("click", () => {
@@ -25,11 +27,9 @@ var prevScroll = window.pageYOffset;
 let navHeight = navbar.offsetHeight;
 function fixedNav() {
     if (window.pageYOffset >= navHeight + 200) {
-        body.style.paddingTop = `${navHeight}px`;
         navbar.classList.add("fixed-nav");
     } else {
         if (window.pageYOffset < navHeight / 4) {
-            body.style.paddingTop = 0;
             navbar.classList.remove("fixed-nav");
         }
     }
