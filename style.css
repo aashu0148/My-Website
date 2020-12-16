@@ -16,6 +16,7 @@
   font-family: "Poppins", sans-serif;
 }
 html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -25,6 +26,9 @@ body {
 
 .overflow-hidden {
   overflow: hidden !important;
+}
+.no-transition {
+  transition: 10ms !important;
 }
 .loader-container {
   background: #fff;
@@ -210,7 +214,7 @@ body {
   background: url("./image\ 36.svg");
   background-size: cover;
   z-index: -5;
-  transform: scale(1.8) translateX(0);
+  transform: scale(1.8) translate(0, -50px);
   /* filter: blur(4px); */
 }
 .main {
@@ -250,6 +254,9 @@ navbar .logo {
   font-size: 3rem;
   font-weight: bold;
   margin-left: 20px;
+  cursor: default;
+  text-decoration: none;
+  color: #000;
 }
 navbar .small-ul {
   width: 25%;
@@ -491,6 +498,7 @@ header {
   align-items: center;
   outline: none;
   border: none;
+  text-decoration: none;
 }
 .header-left .h-left-btn span {
   font-family: cursive;
@@ -654,6 +662,46 @@ header {
   font-weight: bolder;
   color: #fff;
 }
+
+/* *********************************** Footer ********************************** */
+.footer {
+  width: 100%;
+  padding: 10px;
+  padding-top: 20px;
+  background: var(--primary-background);
+  box-shadow: 0 -1px 30px var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer p {
+  user-select: none;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.footer-icon {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  margin-top: 2px;
+}
+
+.footer-icon a {
+  cursor: pointer;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--primary-color);
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: var(--secondary-color) !important;
+}
+
 /* *********************************** media queries*************************** */
 @media (min-width: 1200px) {
   navbar .logo {
@@ -714,7 +762,7 @@ header {
 
 @media (max-width: 400px) {
   .main::before {
-    transform: scale(1.8) translateX(-50px);
+    transform: scale(1.8) translate(-50px, -50px);
   }
   .burger-box .hamburger::before {
     transition: 0.2s !important;

@@ -22,23 +22,23 @@
             <div class="para3"></div>
         </div>
     </div>
-    <div class="main">
+    <div id="main" class="main">
         <div class="nav-cont">
             <navbar>
-                <div class="logo">Anshul</div>
+                <a href="#main" class="logo">Anshul</a>
 
                 <ul class="small-ul">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <div class="burger-box">
                         <div class="hamburger"></div>
                     </div>
                 </ul>
                 <ul class="large-ul">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Skills</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a id="nav-link" href="#about">About</a></li>
+                    <li><a id="nav-link" href="#projects">Projects</a></li>
+                    <li><a id="nav-link" href="#skills">Skills</a></li>
+                    <li><a id="nav-link" href="#footer">Contact</a></li>
                 </ul>
             </navbar>
         </div>
@@ -49,7 +49,7 @@
                     I'm a
                     <pre style="display: inline-block;" class=" changing-text"></pre>
                 </h1>
-                <button class="h-left-btn">Contact <span>➾</span></button>
+                <a href="#footer" class="h-left-btn">Contact <span>➾</span></a>
             </div>
             <div data-aos="flip-up" class="header-right">
                 <div class="image-container">
@@ -58,7 +58,7 @@
             </div>
         </header>
     </div>
-    <div data-aos="zoom-in" class="about">
+    <div id="about" data-aos="zoom-in" class="about">
         <h1 class="heading">About me :)</h1>
         <div class="content">
             <div>
@@ -77,7 +77,7 @@
             </div>
         </div>
     </div>
-    <div class="projects">
+    <div id="projects" class="projects">
         <h1 class="heading">Projects</h1>
         <div class="content">
             <div data-aos="flip-right" class="card">
@@ -167,7 +167,7 @@
         </div>
     </div>
 
-    <div class="skills">
+    <div id="skills" class="skills">
         <h1 class="heading">Skills</h1>
         <div class="content">
             <div data-aos="fade-left-down" class="html skill">
@@ -206,6 +206,23 @@
     </div>
 
 
+    <div id="footer" class="footer">
+        <p>Social links...</p>
+        <div class="footer-icon">
+            <a href="https://wa.link/wv5h7x" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anshul-sharma-a351a11b4/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/aashu0148" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <p class="copyright">copyright @aashu</p>
+    </div>
+
+
 
     <!-- myScript -->
     <script src="./script.js"></script>
@@ -222,7 +239,7 @@
     <script src="./vanilla-tilt.js"></script>
     <script>
         VanillaTilt.init(document.querySelectorAll(".projects .card"), {
-            speed: 1000,
+            speed: 1500,
             max: 30,
             gyroscope: true
         });

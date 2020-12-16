@@ -1,6 +1,7 @@
 const body = document.body;
 const navCont = document.querySelector(".nav-cont");
 const navbar = document.querySelector("navbar");
+const navLinks = document.querySelectorAll("#nav-link");
 const loaderContainer = document.querySelector(".loader-container");
 const burger = document.querySelector(".burger-box");
 const largeUl = document.querySelector("navbar .large-ul");
@@ -19,6 +20,19 @@ burger.addEventListener("click", () => {
     setTimeout(() => {
         document.documentElement.classList.toggle("overflow-hidden");
     }, 300)
+})
+
+//navbar
+navLinks.forEach(e => {
+    e.addEventListener("click", () => {
+        burger.classList.toggle("active-ham");
+        largeUl.classList.add("no-transition");
+        largeUl.classList.toggle("active-list");
+        document.documentElement.classList.toggle("overflow-hidden");
+        setTimeout(() => {
+            largeUl.classList.remove("no-transition");
+        }, 100)
+    })
 })
 
 //fixed navbar
